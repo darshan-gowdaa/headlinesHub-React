@@ -1,11 +1,16 @@
 # 📰 **HeadlinesHub**  
 **A React-based News Aggregator App**  
 
-![React](https://img.shields.io/badge/React-18.3.1-blue)  
-![Vite](https://img.shields.io/badge/Vite-6.0.5-orange)  
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.3-purple)  
+![React](https://img.shields.io/badge/React-18.3.1-blue)  ![Vite](https://img.shields.io/badge/Vite-6.0.5-orange)  ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.3-purple)  
 
 HeadlinesHub is a modern, responsive news aggregator app built with **React** and **Vite**. It fetches top headlines from various categories using the **NewsAPI** and displays them in a clean, user-friendly interface.  
+
+![image](https://github.com/user-attachments/assets/ddce4004-f75d-4dc3-a1d5-be2277ea155e)
+
+
+---
+
+## **Demo Video: ```[https://tinyurl.com/54ja2sa7]```
 
 ---
 
