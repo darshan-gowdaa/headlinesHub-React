@@ -10,7 +10,7 @@ HeadlinesHub is a modern, responsive news aggregator app built with **React** an
 
 ---
 
-## **Demo Video: ```[https://tinyurl.com/54ja2sa7]```
+# Demo Video: https://tinyurl.com/54ja2sa7
 
 ---
 
@@ -110,11 +110,6 @@ headlineHUB/
 ## 🎨 **Styling**  
 - **Bootstrap:** Used for responsive layouts and components.  
 - **Custom CSS:** Added in `index.css` for animations, dark theme, and custom styles.  
-
----
-
-## 📜 **License**  
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.  
 
 ---
 
