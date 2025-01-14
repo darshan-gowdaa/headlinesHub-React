@@ -3,7 +3,7 @@ import logos from "../assets/logos.png";
 
 function Navbar() {
   return (
-    <nav className="navbar custom-navbar navbar-expand-lg mb-4" data-bs-theme="dark">
+    <nav className="navbar custom-navbar navbar-expand-lg mb-4 sticky-top" data-bs-theme="dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <img src={logos} alt="Logo" className="navbar-logo" />

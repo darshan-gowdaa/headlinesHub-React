@@ -35,6 +35,7 @@
 .card:hover {
   background-color: #242323;
   transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(177, 171, 171, 0.4);
 }
 
 .custom-navbar {
