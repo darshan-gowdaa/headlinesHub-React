@@ -16,7 +16,11 @@ function NewsComp() {
 
   const fetchNews = async () => {
     try {
-      const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=10`);
+      // Direct API call in dev (localhost is allowed), serverless function in production
+      const url = import.meta.env.DEV
+        ? `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=10`
+        : `/api/news?category=${category}&page=${page}`;
+      const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       const data = await response.json();
       setArticles((prev) => [...prev, ...(data.articles || [])]);
@@ -43,22 +47,22 @@ function NewsComp() {
           {articles.length > 0 && (
             <>
               <h2 className="text-center my-4">Top Headlines - {category.charAt(0).toUpperCase() + category.slice(1)}</h2>
-              <InfiniteScroll 
-              dataLength={articles.length} 
-              next={() => setPage((prev) => prev + 1)} 
-              hasMore={hasMore} 
-              loader={<Spinner />}>
+              <InfiniteScroll
+                dataLength={articles.length}
+                next={() => setPage((prev) => prev + 1)}
+                hasMore={hasMore}
+                loader={<Spinner />}>
                 <div className="container">
                   <div className="row">
                     {articles.map((article, index) => (
-                      <NewsDisplay 
-                      key={index} 
-                      title={article.title} 
-                      description={article.description} 
-                      src={article.urlToImage} 
-                      url={article.url} 
-                      date={article.publishedAt} 
-                      source={article.source.id} />
+                      <NewsDisplay
+                        key={index}
+                        title={article.title}
+                        description={article.description}
+                        src={article.urlToImage}
+                        url={article.url}
+                        date={article.publishedAt}
+                        source={article.source.id} />
                     ))}
                   </div>
                 </div>
