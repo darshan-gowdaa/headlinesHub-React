@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import NewsComp from "./components/NewsComp";
 
 function App() {
